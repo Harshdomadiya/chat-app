@@ -4,7 +4,7 @@ dotenv.config();
 
 const connectDatabase = async () =>{
     try{
-        await mongoose.connect("mongodb+srv://harshdomadiya1014:xlw7ubVtOn4gvcPA@cluster0.v2gprql.mongodb.net/chat-app-db?retryWrites=true&w=majority");
+        await mongoose.connect(process.env.MONGO_DB_URL);
         console.log("connect db successfully");
          
     }catch(e){
